@@ -94,7 +94,7 @@ Extracted 60 rows fully.
 Extracted 39 rows incrementally since 2025-04-20 12:00:00.
 Updated last_extraction.txt to 2025-05-31 22:15:00
 
-#  Transformation Section 
+## Transformation Section
 Entirely new section added, which includes:
 
 A short explanation of the three required transformation techniques:
