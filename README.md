@@ -1,4 +1,4 @@
-# ETL Extract Lab
+# ETL Extract & Transform Lab
 
  **Name**  Merhawit Tesfay
 **Student ID:** 670554 
@@ -14,7 +14,7 @@ The notebook performs the following:
 1. **Full Extraction** – Loads all available data from the CSV file.
 2. **Incremental Extraction** – Loads only records updated since a previously stored timestamp.
 3. **Timestamp Update** – Updates the checkpoint time after a successful incremental load.
-
+4. Transformation – Applies data cleaning, enrichment, and structural formatting for analysis.
 ---
 
 ## Tools Used
@@ -38,6 +38,10 @@ custom_data.csv
 last_extraction.txt
 → Stores the timestamp of the last incremental extraction.
 
+transformed_full.csv
+
+transformed_incremental.csv
+
 .gitignore
 → Configuration file to prevent unnecessary files (e.g., cache, logs) from being pushed to GitHub.
 
@@ -57,7 +61,9 @@ README.md
    - Perform full and incremental extractions.
    - Update `last_extraction.txt` after successful extraction.
 4. You’ll see printed outputs showing how many rows were extracted in each mode.
+Clarified that the notebook also performs transformations after extraction.
 
+Noted that two transformed .csv files are saved after execution.
 ---
 
 ##  Dataset Info
@@ -88,10 +94,21 @@ Extracted 60 rows fully.
 Extracted 39 rows incrementally since 2025-04-20 12:00:00.
 Updated last_extraction.txt to 2025-05-31 22:15:00
 
+#  Transformation Section 
+Entirely new section added, which includes:
+
+A short explanation of the three required transformation techniques:
+
+Cleaning (remove duplicates)
+
+Enrichment (add rating_category)
+
+Structural (convert review_date to datetime)
+
+Output files generated:
+transformed_full.csv and transformed_incremental.csv
 
 ---
-### Submission
-This project is submitted as part of:
-DSA 2040A - LAB 3 US 2025: Take-Home Lab – Practicing Extraction in ETL
+
 
 
