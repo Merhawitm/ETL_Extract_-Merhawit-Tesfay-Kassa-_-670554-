@@ -1,5 +1,12 @@
+# Ignore all CSVs except the transformed ones
+*.csv
+!transformed_full.csv
+!transformed_incremental.csv
+
+# Ignore Jupyter checkpoints
 .ipynb_checkpoints/
-__pycache__/
+
+# Ignore logs or temp files
 *.log
-*.sqlite
-last_extraction.txt
+*.tmp
+
