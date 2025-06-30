@@ -6,7 +6,21 @@
 # Ignore Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Ignore logs or temp files
-*.log
+# Ignore Python cache and temp files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.tmp
+*.log
+
+# Ignore SQLite DBs (optional - remove if you want to keep them in Git)
+*.sqlite
+*.db
+
+# Ignore last extraction time file (used only locally)
+last_extraction.txt
+
+# Ignore VS Code settings (optional)
+.vscode/
 
