@@ -33,6 +33,7 @@ The notebook performs the following:
 ## Project Structure
 
 ├── etl_extract.ipynb
+
 ├── etl_load.ipynb
 ├── custom_data.csv
 ├── transformed_full.csv
