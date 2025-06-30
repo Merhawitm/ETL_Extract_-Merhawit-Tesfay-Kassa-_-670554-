@@ -11,10 +11,13 @@ This project demonstrates the difference between **Full Extraction** and **Incre
 
 The notebook performs the following:
 
-1. **Full Extraction** – Loads all available data from the CSV file.
-2. **Incremental Extraction** – Loads only records updated since a previously stored timestamp.
-3. **Timestamp Update** – Updates the checkpoint time after a successful incremental load.
-4. Transformation – Applies data cleaning, enrichment, and structural formatting for analysis.
+1. `etl_extract.ipynb`:  
+   - Performs full and incremental extraction from a sample dataset
+   - Saves outputs to `transformed_full.csv` and `transformed_incremental.csv`
+
+2. `etl_load.ipynb`:  
+   - Loads the transformed data into a structured format (SQLite databases)
+   - Saves `full_data.db` and `incremental_data.db` into the `loaded_data/` directory
 ---
 
 ## Tools Used
@@ -29,41 +32,53 @@ The notebook performs the following:
 
 ## Project Structure
 
-etl_extract.ipynb
-→ Jupyter notebook containing the code for full and incremental extraction.
-
-custom_data.csv
-→ Synthetic dataset of product reviews generated using Python.
-
-last_extraction.txt
-→ Stores the timestamp of the last incremental extraction.
-
-transformed_full.csv
-
-transformed_incremental.csv
-
-.gitignore
-→ Configuration file to prevent unnecessary files (e.g., cache, logs) from being pushed to GitHub.
-
-README.md
-→ This file — explains the purpose, usage, and structure of the project.
-
+├── etl_extract.ipynb
+├── etl_load.ipynb
+├── custom_data.csv
+├── transformed_full.csv
+├── transformed_incremental.csv
+├── last_extraction.txt
+├── .gitignore
+├── README.md
+└── loaded_data/
+├── full_data.db
+└── incremental_data.db
 
 ---
 
 ##  How to Reproduce
 
 1. **Clone or download** the repository from GitHub.
-2. Open `etl_extract.ipynb` in **Jupyter Notebook** or **JupyterLab**.
-3. Run all cells in order.
+. Open `etl_extract.ipynb` in **Jupyter Notebook** or **JupyterLab**.
+. Run all cells in order.
    - This will generate `custom_data.csv`.
    - Simulate a past extraction time.
    - Perform full and incremental extractions.
    - Update `last_extraction.txt` after successful extraction.
-4. You’ll see printed outputs showing how many rows were extracted in each mode.
+. You’ll see printed outputs showing how many rows were extracted in each mode.
 Clarified that the notebook also performs transformations after extraction.
 
-Noted that two transformed .csv files are saved after execution.
+# 2. Run the Notebooks
+Open the project in VS Code or JupyterLab
+
+Run etl_extract.ipynb to:
+
+Simulate full & incremental extraction
+
+Save CSV outputs
+
+Run etl_load.ipynb to:
+
+Load CSVs into SQLite databases
+
+Preview data
+
+# 3. Check Output Files
+Extracted CSVs:
+transformed_full.csv, transformed_incremental.csv
+
+Loaded SQLite DBs:
+loaded_data/full_data.db, loaded_data/incremental_data.db
 ---
 
 ##  Dataset Info
