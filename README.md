@@ -18,6 +18,8 @@ The notebook performs the following:
 2. `etl_load.ipynb`:  
    - Loads the transformed data into a structured format (SQLite databases)
    - Saves `full_data.db` and `incremental_data.db` into the `loaded_data/` directory
+
+   
 ---
 
 ## Tools Used
